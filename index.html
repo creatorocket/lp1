@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickMax AI - O Combo Perfeito de Thumbnails e Títulos</title>
+    
+    <!-- Tailwind CSS (Estilização Moderna) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Configurações Personalizadas do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a', // Fundo principal
+                            card: '#1e293b', // Fundo dos cards
+                            primary: '#6366f1', // Botão Roxo/Azul
+                            accent: '#22c55e', // Verde Neon (Sucesso/Dinheiro)
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #818cf8, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- BARRA DE AVISO (STICKY) -->
+    <div class="bg-brand-accent text-black font-bold text-center py-2 px-4 sticky top-0 z-50 text-sm md:text-base">
+        🟢 Oferta de Lançamento: 50% OFF no plano anual. Expira em: <span id="countdown">00:15:00</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="flex justify-between items-center py-6 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="text-2xl font-black tracking-tighter text-white">
+            ClickMax <span class="text-indigo-500">AI</span>
+        </div>
+        <a href="#pricing" class="hidden md:block text-gray-300 hover:text-white transition">Login</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="text-center px-4 pt-10 pb-20 max-w-5xl mx-auto">
+        <div class="inline-block bg-gray-800 rounded-full px-4 py-1 text-sm text-indigo-400 mb-6 border border-gray-700">
+            🚀 Nova Feature: Análise de Concorrentes Liberada
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+            Pare de Deixar Views na Mesa.<br>
+            Crie o <span class="gradient-text">Combo Viral</span> em 3 Cliques.
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
+            O primeiro SaaS do mundo que sincroniza psicologia visual e copy persuasiva para dobrar seu CTR. Sem designers caros. Sem bloqueio criativo.
+        </p>
+        
+        <div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+            <a href="#pricing" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-lg py-4 px-8 rounded-lg transition transform hover:scale-105 shadow-lg shadow-indigo-500/30">
+                QUERO AUMENTAR MEUS CLIQUES
+            </a>
+        </div>
+        <p class="text-sm text-gray-500 mb-12">Teste grátis por 7 dias • Não precisa de cartão agora</p>
+
+        <!-- Elemento Visual (Placeholder da Interface) -->
+        <div class="relative mx-auto max-w-4xl rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+            <!-- Imagem placeholder simulando a UI -->
+            <img src="https://placehold.co/1200x675/1e293b/FFFFFF/png?text=Interface+ClickMax+AI:+Preview+de+3+Thumbnails+e+T%C3%ADtulos+Gerados" alt="Interface do Software" class="w-full opacity-90">
+        </div>
+    </header>
+
+    <!-- LOGOS (Social Proof) -->
+    <section class="border-y border-gray-800 bg-gray-900 py-8">
+        <p class="text-center text-gray-500 text-sm uppercase tracking-widest mb-6">Usado por criadores que somam +50M de views</p>
+        <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale">
+            <span class="text-xl font-bold">YOUTUBE</span>
+            <span class="text-xl font-bold">TIKTOK</span>
+            <span class="text-xl font-bold">INSTAGRAM</span>
+            <span class="text-xl font-bold">TWITCH</span>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PROBLEMA -->
+    <section class="py-20 px-4 bg-brand-dark">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                Você gasta horas editando... para o vídeo <span class="text-red-500">"floppar"</span>?
+            </h2>
+            <p class="text-gray-300 text-lg mb-12">
+                Não importa se o conteúdo é digno de Oscar. Se a Thumb não para o scroll e o título não gera curiosidade, <strong>ninguém clica.</strong>
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-red-900/30">
+                    <h3 class="text-red-400 font-bold mb-4 flex items-center">⛔ O jeito antigo:</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><span class="mr-2">❌</span> Designers caros e lentos (24h+ de espera).</li>
+                        <li class="flex items-start"><span class="mr-2">❌</span> Tela em branco tentando inventar títulos.</li>
+                        <li class="flex items-start"><span class="mr-2">❌</span> CTR abaixo de 4% matando seu canal.</li>
+                    </ul>
+                </div>
+                <div class="bg-indigo-900/20 p-6 rounded-xl border border-indigo-500/30">
+                    <h3 class="text-green-400 font-bold mb-4 flex items-center">✅ Com ClickMax AI:</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start"><span class="mr-2">✔</span> Thumbs prontas em 30 segundos.</li>
+                        <li class="flex items-start"><span class="mr-2">✔</span> Títulos baseados em dados virais.</li>
+                        <li class="flex items-start"><span class="mr-2">✔</span> Previsão de CTR antes de postar.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Como Funciona</h2>
+                <p class="text-gray-400">Do zero ao upload em 4 passos simples.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Passo 1 -->
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-indigo-500 border border-gray-700">1</div>
+                    <h3 class="font-bold text-xl mb-2">A Ideia</h3>
+                    <p class="text-gray-400 text-sm">Cole o link do seu roteiro ou descreva o tema do vídeo em poucas palavras.</p>
+                </div>
+                <!-- Passo 2 -->
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-indigo-500 border border-gray-700">2</div>
+                    <h3 class="font-bold text-xl mb-2">A Mágica</h3>
+                    <p class="text-gray-400 text-sm">A IA gera 5 variações de Thumbs + Títulos otimizados para seu nicho.</p>
+                </div>
+                <!-- Passo 3 -->
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-indigo-500 border border-gray-700">3</div>
+                    <h3 class="font-bold text-xl mb-2">A Validação</h3>
+                    <p class="text-gray-400 text-sm">Nosso algoritmo dá uma "Nota de Viralidade" (0-100) para cada opção.</p>
+                </div>
+                <!-- Passo 4 -->
+                <div class="text-center">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-indigo-500 border border-gray-700">4</div>
+                    <h3 class="font-bold text-xl mb-2">O Sucesso</h3>
+                    <p class="text-gray-400 text-sm">Baixe a imagem em 4K, copie o título e publique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Tudo o que você precisa para <span class="text-indigo-500">escalar</span></h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-brand-card p-6 rounded-xl hover:bg-gray-800 transition duration-300 border border-gray-800">
+                <div class="text-4xl mb-4">🎨</div>
+                <h3 class="font-bold text-lg mb-2">Thumb-Generator Pro</h3>
+                <p class="text-sm text-gray-400">Gera imagens realistas, adiciona contornos, brilhos e troca expressões faciais automaticamente.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-brand-card p-6 rounded-xl hover:bg-gray-800 transition duration-300 border border-gray-800">
+                <div class="text-4xl mb-4">✍️</div>
+                <h3 class="font-bold text-lg mb-2">Title-Hook Writer</h3>
+                <p class="text-sm text-gray-400">Cria títulos baseados em gatilhos mentais: Urgência, Medo e Curiosidade. Nada de texto robótico.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-brand-card p-6 rounded-xl hover:bg-gray-800 transition duration-300 border border-gray-800">
+                <div class="text-4xl mb-4">🧪</div>
+                <h3 class="font-bold text-lg mb-2">A/B Testing Sim</h3>
+                <p class="text-sm text-gray-400">A IA simula qual par (Thumb + Título) terá o melhor desempenho no seu nicho.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="bg-brand-card p-6 rounded-xl hover:bg-gray-800 transition duration-300 border border-gray-800">
+                <div class="text-4xl mb-4">🔎</div>
+                <h3 class="font-bold text-lg mb-2">Espião de Nicho</h3>
+                <p class="text-sm text-gray-400">Analisa o que está funcionando para seus concorrentes e cria variações superiores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section class="py-20 px-4 bg-gray-900 border-y border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">Quem usa recomenda</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-brand-dark p-8 rounded-xl text-left">
+                    <p class="italic text-gray-300 mb-6">"Meu CTR subiu de 3.2% para 8.9% na primeira semana usando o ClickMax. O canal reviveu!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-700 rounded-full mr-3"></div> <!-- Placeholder Avatar -->
+                        <div>
+                            <p class="font-bold text-white">Gabriel M.</p>
+                            <p class="text-xs text-gray-500">Canal Tech (150k inscritos)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-dark p-8 rounded-xl text-left">
+                    <p class="italic text-gray-300 mb-6">"Eu demorava 2 horas no Photoshop. Agora resolvo em 5 minutos e fica melhor do que antes."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-700 rounded-full mr-3"></div> <!-- Placeholder Avatar -->
+                        <div>
+                            <p class="font-bold text-white">Ana S.</p>
+                            <p class="text-xs text-gray-500">Vlogs de Viagem (45k inscritos)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREÇOS (PRICING) -->
+    <section id="pricing" class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Escolha o Plano Ideal</h2>
+                <p class="text-gray-400">Cancele quando quiser.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                
+                <!-- Plano Creator -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-gray-600 transition">
+                    <h3 class="text-xl font-bold text-gray-300 mb-2">Plano Creator</h3>
+                    <div class="text-4xl font-black mb-6">R$ 47,90<span class="text-sm font-normal text-gray-500">/mês</span></div>
+                    <ul class="space-y-4 text-gray-400 mb-8 text-sm">
+                        <li class="flex items-center"><span class="text-indigo-500 mr-2">✔</span> 15 Gerações de Combo/mês</li>
+                        <li class="flex items-center"><span class="text-indigo-500 mr-2">✔</span> Banco de Imagens Premium</li>
+                        <li class="flex items-center"><span class="text-indigo-500 mr-2">✔</span> Previsão de CTR Básica</li>
+                    </ul>
+                    <button class="w-full py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg transition">
+                        Começar Teste Grátis
+                    </button>
+                </div>
+
+                <!-- Plano Viral (Destaque) -->
+                <div class="bg-gray-800 border-2 border-indigo-600 rounded-2xl p-8 relative shadow-2xl shadow-indigo-900/20 transform md:scale-105">
+                    <div class="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg uppercase tracking-wide">Mais Vendido</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Plano Viral (Anual)</h3>
+                    <div class="text-4xl font-black mb-1">12x R$ 29,90</div>
+                    <p class="text-green-400 text-sm mb-6">Economize 40% assinando agora</p>
+                    
+                    <ul class="space-y-4 text-gray-300 mb-8 text-sm">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> <strong>Gerações ILIMITADAS</strong></li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> IA de Face Swap (Seu rosto na thumb)</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Análise de Concorrentes</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Acesso Antecipado a Features</li>
+                    </ul>
+                    <button class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-lg transition text-lg animate-pulse-slow">
+                        QUERO O PLANO VIRAL
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GARANTIA -->
+    <section class="py-12 px-4 max-w-3xl mx-auto text-center">
+        <div class="bg-brand-card p-8 rounded-xl border border-gray-800">
+            <div class="text-5xl mb-4">🛡️</div>
+            <h3 class="text-2xl font-bold mb-4">Garantia "Canal Blindado" de 7 Dias</h3>
+            <p class="text-gray-400 mb-6">
+                Use o ClickMax AI à vontade. Gere thumbs, crie títulos, teste em seus vídeos. Se você não sentir que a ferramenta economizou seu tempo ou melhorou sua qualidade visual, nós devolvemos 100% do seu dinheiro.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-4 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+        <div class="space-y-6">
+            <div>
+                <h4 class="font-bold text-lg mb-2">Serve para qualquer nicho?</h4>
+                <p class="text-gray-400">Sim! Games, Vlogs, Educação, Dark Channels. A IA adapta o estilo visual.</p>
+            </div>
+            <hr class="border-gray-800">
+            <div>
+                <h4 class="font-bold text-lg mb-2">Preciso saber mexer em Photoshop?</h4>
+                <p class="text-gray-400">Zero. A ferramenta faz tudo. Você só escolhe o que mais gosta.</p>
+            </div>
+            <hr class="border-gray-800">
+            <div>
+                <h4 class="font-bold text-lg mb-2">As imagens têm direitos autorais?</h4>
+                <p class="text-gray-400">Não. Tudo o que é gerado é 100% seu e livre de royalties para monetizar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <footer class="py-20 px-4 text-center bg-gradient-to-b from-gray-900 to-black">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Você está a um clique de transformar<br>visualizações em inscritos.</h2>
+        <p class="text-gray-400 mb-8">Não deixe seu próximo vídeo flopar por causa de uma capa ruim.</p>
+        <a href="#pricing" class="bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-10 rounded-full text-lg transition shadow-lg shadow-green-500/20 inline-block">
+            COMEÇAR TESTE GRATUITO AGORA
+        </a>
+        
+        <div class="mt-20 border-t border-gray-900 pt-8 text-sm text-gray-600">
+            <p>Copyright © 2024 ClickMax AI. Todos os direitos reservados.</p>
+            <p class="mt-2"><a href="#" class="hover:text-gray-400">Termos de Uso</a> | <a href="#" class="hover:text-gray-400">Política de Privacidade</a></p>
+        </div>
+    </footer>
+
+    <!-- Script Simples para o Contador Regressivo -->
+    <script>
+        // Apenas visual, reseta a cada refresh ou pode ser programado para data real
+        let time = 15 * 60; // 15 minutos
+        const countdownEl = document.getElementById('countdown');
+
+        setInterval(() => {
+            const minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            countdownEl.innerHTML = `00:${minutes}:${seconds}`;
+            if(time > 0) time--;
+        }, 1000);
+    </script>
+
+</body>
+</html>
